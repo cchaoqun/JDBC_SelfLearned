@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--<taglib xmlns="http://java.sun.com/xml/ns/javaee"-->
+<!--        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"-->
+<!--        version="2.1">-->
+
+<!--    <tlib-version>1.0</tlib-version>-->
+<!--    <short-name>myshortname</short-name>-->
+<!--    <uri>http://mycompany.com</uri>-->
+
+<!--    &lt;!&ndash; Invoke 'Generate' action to add tags or functions &ndash;&gt;-->
+
+
+<!--</taglib>-->
+
+<c3p0-config>
+<!-- This app is massive! -->
+<named-config name="helloC3P0">
+    <!--  ???????4?????  -->
+    <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+    <property name="jdbcUrl">jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC&amp;useSSL=false&amp;rewriteBatchedStatements=true</property>
+    <property name="user">root</property>
+    <property name="password">123</property>
+
+    <!-- ??????????????? -->
+    <!--  ??????????????,c3p0????????????  -->
+    <property name="acquireIncrement">50</property>
+    <!--  c3p0??????????????  -->
+    <property name="initialPoolSize">100</property>
+    <!-- c3p0?????????????? -->
+    <property name="minPoolSize">10</property>
+    <!-- c3p0??????????????? -->
+    <property name="maxPoolSize">100</property>
+    <!-- c3p0???????????Statement??? -->
+    <property name="maxStatements">50</property>
+    <!-- ????????????Statement??? -->
+    <property name="maxStatementsPerConnection">2</property>
+
+</named-config>
+</c3p0-config>
